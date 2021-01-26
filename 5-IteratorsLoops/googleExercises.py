@@ -10,7 +10,12 @@
 # Return the resulting string.
 def verbing(s):
     # +++your code here+++
-    return
+    if len(s) > 2 and s[-3:] == 'ing':
+        return s + 'ly'
+    elif len(s) > 2:
+        return s + 'ing'
+    else:
+        return s
 
 # E. not_bad
 # Given a string, find the first appearance of the
@@ -22,7 +27,13 @@ def verbing(s):
 # This dinner is good!
 def not_bad(s):
     # +++your code here+++
-    return
+    indexNot = s.find('not')
+    index_Bad = s.find('bad')
+
+    if index_Bad > indexNot:
+        return s.replace(s[indexNot:(index_Bad+3)], 'good')
+        
+    return s
 
 # F. front_back
 # Consider dividing a string into two halves.
@@ -32,8 +43,21 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-  # +++your code here+++
-  return
+    # +++your code here+++
+    len_A = len(a)
+    len_B = len(b)
+
+    if len_A % 2 == 0:
+        index_A = len_A // 2
+    else:
+        index_A = (len_A // 2) + 1
+
+    if len_B % 2 == 0:
+        index_B = len_B // 2
+    else:
+        index_B = (len_B // 2) + 1
+
+    return a[0:index_A] + b[0:index_B] + a[index_A:] + b[index_B:]
 
 
 # Simple provided test() function used in main() to print
