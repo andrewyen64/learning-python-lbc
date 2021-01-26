@@ -48,6 +48,7 @@ for num in range(100, 1, -2): print(num, end=' ')
 # 100 98 96 94 92 90 88 86 84 82 80 78 76 74 72 70 68 66 64 62 60 58 56 54 52 
 # 50 48 46 44 42 40 38 36 34 32 30 28 26 24 22 20 18 16 14 12 10 8 6 4 2
 
+
 s = 'Himanshu'
 #    01234567
 L = len(s)
@@ -55,13 +56,15 @@ L = len(s)
 for x in range(L):
     if x % 2 == 0:
         print(s[x])
+# H
+# m
+# n
+# h
 
-# https://codingbat.com/prob/p170842 - String-2 > double_char
 def double_char(str):
     result = ''
     for x in str:
-      result += x*2
-
+        result += x*2
     return result
 
 ### While Loop ---------------------------
@@ -97,3 +100,7 @@ while True:
 # Enter a char:z
 # 
 
+# use 3 backticks 
+# ```
+# your code
+# ``` 
