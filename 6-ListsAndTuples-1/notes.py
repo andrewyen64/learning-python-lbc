@@ -111,3 +111,10 @@ sorted(names)
 # ['Aaad', 'aaaa', 'ccs', 'eq']
 sorted(names, key=change_to_lower)
 # ['aaaa', 'Aaad', 'ccs', 'eq']
+
+
+## Includes --------------------------
+# You can use 'element in arr' to check if element is included in the array
+# Given an int array length 2, return True if it contains a 2 or a 3.
+def has23(nums):
+    return 2 in nums or 3 in nums
