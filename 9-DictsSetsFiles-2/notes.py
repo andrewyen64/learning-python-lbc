@@ -50,11 +50,12 @@ s1.difference(s2)
 # - write -> create/overwrite
         # -> append
 
-## open('path/to/file', mode)
+## open('path/to/file', mode) -------------------
 open('/Users/Andrew/Desktop/letsBrewCode/letsbrewcode-python/9-DictsSetsFiles-2/unique_chars.py')
 f = open('/Users/Andrew/Desktop/letsBrewCode/letsbrewcode-python/9-DictsSetsFiles-2/unique_chars.py', 'r')
 # f -> read
-#   -> 
+#   -> write
+#   -> append
 f.read()
 
 f1 = open('/Users/Andrew/Desktop/letsBrewCode/letsbrewcode-python/9-DictsSetsFiles-2/unique_chars.py', 'r')
@@ -77,3 +78,23 @@ for x in lines:
 # Function returns true if string contains all unique characters
 # Else it will return False...
 
+
+## f.write ----------------
+f = open('/Users/Andrew/Desktop/letsBrewCode/letsbrewcode-python/9-DictsSetsFiles-2/unique_chars.py', 'w')
+f.write("My name is Blank")
+f.write("I eat everyday")
+
+f.close()
+
+f = open('/Users/Andrew/Desktop/letsBrewCode/letsbrewcode-python/9-DictsSetsFiles-2/unique_chars.py', 'w')
+f.write('Writing again\n')
+
+
+input = open('/Users/Andrew/Desktop/letsBrewCode/letsbrewcode-python/9-DictsSetsFiles-2/unique_chars.py', 'r')
+output = open('/Users/Andrew/Desktop/letsBrewCode/letsbrewcode-python/9-DictsSetsFiles-2/myfile.txt', 'w')
+
+for line in input:
+    output.write(line)
+    output.write('!@#$%^&*()')
+
+output.close()
