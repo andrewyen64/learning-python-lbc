@@ -8,12 +8,12 @@
 x, y = 1, 2, 3
 # Traceback (most recent call last):
 #   File "<stdin>", line 1, in <module>
-# ValueError: too many values to unpack (expected 2)
+# ValueError: too many values to unpack (expected 2) <--
 
 x, y, z = ['frodo', 'sam']
 # Traceback (most recent call last):
 #   File "<stdin>", line 1, in <module>
-# ValueError: not enough values to unpack (expected 3, got 2)
+# ValueError: not enough values to unpack (expected 3, got 2) <--
 
 
 # `*` next to a variable ------------------
@@ -66,11 +66,29 @@ print(intersect(['s', 'a', 't'], 'sharma'))
 # ['s', 'a']
 
 
+time = 'am'
 
+if time == 'am':
+    def greet():
+        return 'Good morning'
+else:
+    def greet():
+        return 'Good afternoon'
 
+print(greet())
+# ----------------------------------------
+def func1():
+    print('In function1')
 
+    def func2():
+        print('This is function 2')
 
+    #funct2()
+    print('Ending function 1')
+    return func2
 
+x = func1()
+x()
 
 
 
